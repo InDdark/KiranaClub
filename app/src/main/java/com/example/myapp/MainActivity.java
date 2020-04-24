@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         testBtn = findViewById(R.id.testBtn);
         testName = (EditText)findViewById(R.id.testName);
         database = FirebaseDatabase.getInstance();
-        reef = database.getReference("Kiranaclub-49c8d");
+        reef = database.getReference();
         user = new testUser();
 
 

@@ -34,7 +34,7 @@ public class CustomerEnd extends AppCompatActivity {
        A2LogID = (EditText)findViewById(R.id.A2LogID);
        A2pass = (EditText)findViewById(R.id.A2pass);
         cusData = new customerData();
-      reff = FirebaseDatabase.getInstance().getReference().child("customerData");
+      reff = FirebaseDatabase.getInstance().getReference();
 
         A2btn = (Button) findViewById(R.id.A2btn);
         A2btn.setOnClickListener(new View.OnClickListener() {
@@ -45,21 +45,7 @@ public class CustomerEnd extends AppCompatActivity {
                     public void onClick(View v) {
                         //Intent intent = new Intent(arg0.getContext(), DashboardActivity.class);
                         //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                        String user = A2User.getText().toString().trim();
-                        String address = A2address.getText().toString().trim();
-                        String email   = A2Email.getText().toString().trim();
-                        //Date birth = A2DOB.getText();
-                        String UserID = A2LogID.getText().toString().trim();
-                        String password = A2pass.getText().toString().trim();
 
-                        cusData.setUserName(user);
-                        cusData.setAddress(address);
-                        cusData.setUserEmail(email);
-                        cusData.setUserName(UserID);
-                        cusData.setUserPass(password);
-
-                        reff.push().setValue(cusData);
-                        Toast.makeText(CustomerEnd.this,"database ran successfully",Toast.LENGTH_LONG).show();
 
                     }
                 });
@@ -71,6 +57,22 @@ public class CustomerEnd extends AppCompatActivity {
        A2btn.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
+               String user = A2User.getText().toString().trim();
+               String address = A2address.getText().toString().trim();
+               String email   = A2Email.getText().toString().trim();
+               //Date birth = A2DOB.getText();
+               String UserID = A2LogID.getText().toString().trim();
+               String password = A2pass.getText().toString().trim();
+
+               cusData.setUserName(user);
+               cusData.setAddress(address);
+               cusData.setUserEmail(email);
+               cusData.setUserName(UserID);
+               cusData.setUserPass(password);
+
+               reff.child("customerData").setValue(cusData);
+
+               Toast.makeText(CustomerEnd.this,"database ran successfully",Toast.LENGTH_LONG).show();
                openCusLog();
            }
        });
