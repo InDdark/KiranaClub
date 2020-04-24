@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:scrollbarSize="15dp"
+    tools:context=".CustomerEnd">
+
+    <TextView
+        android:id="@+id/A2Reg"
+        android:layout_width="248dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="16dp"
+        android:paddingLeft="5dp"
+        android:paddingTop="3dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="3dp"
+        android:text="User Registration"
+        android:textColor="#FF5722"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.183"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/A2Email"
+        android:layout_width="265dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="@android:string/defaultVoiceMailAlphaTag"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/A2address"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/A2address"
+        app:layout_constraintTop_toBottomOf="@+id/A2address" />
+
+    <EditText
+        android:id="@+id/A2LogID"
+        android:layout_width="263dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="LogIn ID"
+        android:inputType="textPersonName"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/A2Email"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/A2Email"
+        app:layout_constraintTop_toBottomOf="@+id/A2Email" />
+
+    <EditText
+        android:id="@+id/A2pass"
+        android:layout_width="256dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/A2LogID"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/A2LogID"
+        app:layout_constraintTop_toBottomOf="@+id/A2LogID" />
+
+    <Button
+        android:id="@+id/A2btn"
+        android:layout_width="78dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="24dp"
+        android:text="Submit"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/A2pass"
+        app:layout_constraintHorizontal_bias="0.342"
+        app:layout_constraintStart_toStartOf="@+id/A2pass"
+        app:layout_constraintTop_toBottomOf="@+id/A2pass" />
+
+    <EditText
+        android:id="@+id/A2User"
+        android:layout_width="263dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="@string/app_name"
+        android:inputType="textPersonName"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/A2Reg"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/A2Reg"
+        app:layout_constraintTop_toBottomOf="@+id/A2Reg" />
+
+    <EditText
+        android:id="@+id/A2address"
+        android:layout_width="268dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Address"
+        android:inputType="textPostalAddress"
+        app:layout_constraintStart_toStartOf="@+id/A2User"
+        app:layout_constraintTop_toBottomOf="@+id/A2User" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
